@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #0A66C2;
+  margin-bottom: 10px;
+}
+
+.tool-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-box,
+.preview-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+textarea {
+  width: 100%;
+  height: 350px;
+  margin-top: 15px;
+  padding: 15px;
+  resize: vertical;
+  font-size: 16px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  background: #0A66C2;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#characterCount {
+  margin-top: 15px;
+  color: #555;
+}
+
+#previewContent {
+  min-height: 350px;
+  margin-top: 15px;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+#copyBtn {
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+  .tool-section {
+    grid-template-columns: 1fr;
+  }
+
+}
+.linkedin-card {
+  margin-top: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.linkedin-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0A66C2;
+}
+
+.linkedin-header p {
+  margin-top: 4px;
+  color: #666;
+  font-size: 14px;
+}
+
+.linkedin-card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.seo-content,
+.faq-section {
+  margin-top: 50px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.seo-content h2,
+.faq-section h2 {
+  margin-bottom: 15px;
+}
+
+.seo-content p,
+.faq-section p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.faq-section h3 {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
