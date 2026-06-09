@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://linkedin-tools-suite.avikyou4.workers.dev/sitemap.xml
