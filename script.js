@@ -17,20 +17,29 @@ const copyBtn = document.getElementById("copyBtn");
 const count = inputText.value.length;
 
 function updatePreview() {
+
   previewContent.textContent = inputText.value;
-  characterCount.textContent =
-   count + " / 2600 characters";
-   if (count > 2400) {
-  characterCount.style.color = "orange";
-}
 
-if (count > 2600) {
-  characterCount.style.color = "red";
-}
+  const characterCountValue = inputText.value.length;
 
-if (count <= 2400) {
-  characterCount.style.color = "green";
-}
+  const wordCountValue = inputText.value
+    .trim()
+    .split(/\s+/)
+    .filter(word => word.length > 0)
+    .length;
+
+  characterCount.textContent = 
+    `${characterCountValue} / 2600 characters | ${wordCountValue} words`;
+
+  if (characterCountValue > 2400) {
+    characterCount.style.color = "orange";
+  } else {
+    characterCount.style.color = "green";
+  }
+
+  if (characterCountValue > 2600) {
+    characterCount.style.color = "red";
+  }
 }
 
 inputText.addEventListener("input", updatePreview);
