@@ -15,8 +15,18 @@ const bulletBtn = document.getElementById("bulletBtn");
 const clearBtn = document.getElementById("clearBtn");
 const copyBtn = document.getElementById("copyBtn");
 const count = inputText.value.length;
+const progressFill =
+  document.getElementById("progressFill");
+const themeToggle =
+  document.getElementById("themeToggle");
+  
+  themeToggle.addEventListener("click", () => {
 
-function updatePreview() {
+  document.body.classList.toggle("dark-mode");
+
+});  
+
+  function updatePreview() {
 
   previewContent.textContent = inputText.value;
 
@@ -40,6 +50,11 @@ function updatePreview() {
   if (characterCountValue > 2600) {
     characterCount.style.color = "red";
   }
+
+  const percentage = (characterCountValue / 2600) * 100;
+
+    progressFill.style.width = percentage + "%";
+
 }
 
 inputText.addEventListener("input", updatePreview);
@@ -160,3 +175,23 @@ Always learning and looking for new opportunities.`;
 
   updatePreview();
 });
+
+themeToggle.addEventListener("click", () => {
+
+  document.body.classList.toggle("dark-mode");
+
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light"
+  );
+
+});
+
+if (
+  localStorage.getItem("theme")
+  === "dark"
+) {
+  document.body.classList.add("dark-mode");
+}
