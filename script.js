@@ -17,6 +17,12 @@ const copyBtn = document.getElementById("copyBtn");
 const count = inputText.value.length;
 const progressFill =
   document.getElementById("progressFill");
+
+const percentage =
+  (characterCountValue / 2600) * 100;
+
+  progressFill.style.width = percentage + "%";  
+  
 const themeToggle =
   document.getElementById("themeToggle");
   
