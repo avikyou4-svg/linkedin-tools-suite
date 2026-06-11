@@ -22,13 +22,13 @@ const percentage =
   (characterCountValue / 2600) * 100;
 
   progressFill.style.width = percentage + "%";  
-  
+
 const themeToggle =
   document.getElementById("themeToggle");
   
-  themeToggle.addEventListener("click", () => {
+    themeToggle.addEventListener("click", () => {
 
-  document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("dark-mode");
 
 });  
 

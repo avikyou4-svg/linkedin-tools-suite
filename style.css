@@ -104,8 +104,9 @@ button:hover {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 20px;
+  
   box-shadow:
-  0 4px 12px rgba(0,0,0,0.08);
+    0 4px 12px rgba(0,0,0,0.08);
 }
 
 .linkedin-header {
@@ -249,4 +250,52 @@ footer {
 .dark-mode .linkedin-card {
   background: #1e1e1e;
   color: white;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-brand h3 {
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0A66C2;
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.disclaimer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.tagline {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
