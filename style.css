@@ -66,9 +66,6 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-}
-
-button:hover {
   opacity: 0.9;
 }
 
@@ -161,13 +158,6 @@ button:hover {
   margin-top: 20px;
 }
 
-footer {
-  margin-top: 50px;
-  text-align: center;
-  padding: 30px;
-  color: #666;
-}
-
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -247,9 +237,28 @@ footer {
 .dark-mode .seo-content,
 .dark-mode .faq-section,
 .dark-mode .tool-card,
-.dark-mode .linkedin-card {
+.dark-mode .linkedin-card,
+.dark-mode .disclaimer {
   background: #1e1e1e;
   color: white;
+}
+
+.dark-mode textarea {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-mode #previewContent {
+  background: #2a2a2a;
+}
+
+.dark-mode footer {
+  border-top: 1px solid #333;
+}
+
+.dark-mode .footer-links a {
+  color: #66aaff;
 }
 
 footer {

@@ -1,38 +1,20 @@
-const professionalTemplate =
-  document.getElementById("professionalTemplate");
-
-const freelancerTemplate =
-  document.getElementById("freelancerTemplate");
-
-const jobSeekerTemplate =
-  document.getElementById("jobSeekerTemplate");
 const inputText = document.getElementById("inputText");
 const previewContent = document.getElementById("previewContent");
 const characterCount = document.getElementById("characterCount");
+const progressFill = document.getElementById("progressFill");
 
 const cleanBtn = document.getElementById("cleanBtn");
 const bulletBtn = document.getElementById("bulletBtn");
 const clearBtn = document.getElementById("clearBtn");
 const copyBtn = document.getElementById("copyBtn");
-const count = inputText.value.length;
-const progressFill =
-  document.getElementById("progressFill");
 
-const percentage =
-  (characterCountValue / 2600) * 100;
+const professionalTemplate = document.getElementById("professionalTemplate");
+const freelancerTemplate = document.getElementById("freelancerTemplate");
+const jobSeekerTemplate = document.getElementById("jobSeekerTemplate");
 
-  progressFill.style.width = percentage + "%";  
+const themeToggle = document.getElementById("themeToggle");
 
-const themeToggle =
-  document.getElementById("themeToggle");
-  
-    themeToggle.addEventListener("click", () => {
-
-      document.body.classList.toggle("dark-mode");
-
-});  
-
-  function updatePreview() {
+function updatePreview() {
 
   previewContent.textContent = inputText.value;
 
@@ -44,47 +26,38 @@ const themeToggle =
     .filter(word => word.length > 0)
     .length;
 
-  characterCount.textContent = 
+  characterCount.textContent =
     `${characterCountValue} / 2600 characters | ${wordCountValue} words`;
 
-  if (characterCountValue > 2400) {
+  if (characterCountValue <= 2400) {
+    characterCount.style.color = "green";
+  } else if (characterCountValue <= 2600) {
     characterCount.style.color = "orange";
   } else {
-    characterCount.style.color = "green";
-  }
-
-  if (characterCountValue > 2600) {
     characterCount.style.color = "red";
   }
 
-  const percentage = (characterCountValue / 2600) * 100;
+  const percentage = Math.min(
+    (characterCountValue / 2600) * 100,
+    100
+  );
 
-    progressFill.style.width = percentage + "%";
-
+  progressFill.style.width = percentage + "%";
 }
 
 inputText.addEventListener("input", updatePreview);
-
-updatePreview();
-
-
-// CLEAN SPACING
 
 cleanBtn.addEventListener("click", () => {
 
   let text = inputText.value;
 
   text = text.replace(/[ \t]+/g, " ");
-
   text = text.replace(/\n{3,}/g, "\n\n");
 
   inputText.value = text;
 
   updatePreview();
 });
-
-
-// ADD BULLETS
 
 bulletBtn.addEventListener("click", () => {
 
@@ -101,18 +74,12 @@ bulletBtn.addEventListener("click", () => {
   updatePreview();
 });
 
-
-// CLEAR
-
 clearBtn.addEventListener("click", () => {
 
   inputText.value = "";
 
   updatePreview();
 });
-
-
-// COPY
 
 copyBtn.addEventListener("click", async () => {
 
@@ -128,7 +95,7 @@ copyBtn.addEventListener("click", async () => {
       copyBtn.textContent = "Copy Formatted Text";
     }, 2000);
 
-  } catch (error) {
+  } catch {
 
     alert("Copy failed.");
 
@@ -195,9 +162,8 @@ themeToggle.addEventListener("click", () => {
 
 });
 
-if (
-  localStorage.getItem("theme")
-  === "dark"
-) {
+if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-mode");
 }
+
+updatePreview();
