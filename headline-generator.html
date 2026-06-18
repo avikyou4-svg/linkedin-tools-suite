@@ -1,145 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>LinkedIn Headline Generator | ProfileCraft</title>
+    <title>LinkedIn Headline Generator | ProfileCraft</title>
 
-  <meta
-    name="description"
-    content="Generate professional LinkedIn headlines instantly for job seekers, freelancers, students and professionals."
-  >
+    <meta
+        name="description"
+        content="Generate professional LinkedIn headlines instantly for job seekers, freelancers, students and professionals."
+    >
 
-  <link rel="stylesheet" href="headline-generator.css">
-  <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="headline-generator.css">
+    <link rel="icon" href="favicon.svg">
+    
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-  <header>
+        <header>
 
-    <a href="index.html" class="back-link">
-      ← Back to ProfileCraft
-    </a>
+            <a href="index.html" class="back-link">
+                ← Back to ProfileCraft
+            </a>
 
-    <h1>LinkedIn Headline Generator</h1>
+            <h1>LinkedIn Headline Generator</h1>
 
-    <p>
-      Generate professional LinkedIn headlines in seconds.
-    </p>
+            <p>
+                Generate professional LinkedIn headlines in seconds.
+            </p>
 
-  </header>
+            <button id="themeToggle">
+                🌙 Dark Mode
+            </button>
 
-  <section class="generator-card">
+            <span class="free-badge">
+                100% Free • No Sign-up Required
+            </span>
 
-    <div class="field">
+        </header>
 
-      <label for="profession">Profession</label>
+        <section class="generator-card">
 
-      <select id="profession">
+            <div class="field">
 
-        <option>Software Engineer</option>
-        <option>Digital Marketer</option>
-        <option>Designer</option>
-        <option>Student</option>
-        <option>Fresher</option>
-        <option>Freelancer</option>
-        <option>Business Owner</option>
-        <option>Content Creator</option>
-        <option>HR Professional</option>
-        <option>Sales Professional</option>
+                <label for="profession">Profession</label>
 
-      </select>
+                <select id="profession">
+
+                    <option>Software Engineer</option>
+                    <option>Digital Marketer</option>
+                    <option>Designer</option>
+                    <option>Student</option>
+                    <option>Fresher</option>
+                    <option>Freelancer</option>
+                    <option>Business Owner</option>
+                    <option>Content Creator</option>
+                    <option>HR Professional</option>
+                    <option>Sales Professional</option>
+
+                </select>
+
+            </div>
+
+            <div class="field">
+
+            <label>Skills</label>
+
+            <input
+                type="text"
+                id="skills"
+                placeholder="React, SEO, Figma...">
+
+            </div>
+
+            <div class="field">
+
+                <label for="goal">Goal</label>
+
+                <select id="goal">
+
+                    <option>Get Hired</option>
+                    <option>Find Clients</option>
+                    <option>Build Personal Brand</option>
+                    <option>Networking</option>
+
+                </select>
+
+            </div>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox" id="openToWork">
+                    Open to Work
+                </label>
+
+            </div>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox" id="emojiMode">
+                    Add Emojis
+                </label>
+
+            </div>
+
+            <button id="generateBtn">
+                Generate Headlines
+            </button>
+
+            <button id="moreBtn">
+                Generate More
+            </button>
+
+        </section>
+
+        <section class="results-card">
+
+            <h2>Generated Headlines</h2>
+
+            <div id="headlineStats">
+
+                <div class="stat-box">
+                    <h3>Characters</h3>
+                    <p id="characterCount">
+                    0 / 220
+                    </p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>Headline Score</h3>
+                    <p id="headlineScore">
+                    0 / 100
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="results">
+
+                Your headlines will appear here.
+
+            </div>
+
+            <button id="copyBtn">
+                Copy All Headlines
+            </button>
+
+            <button id="downloadBtn">
+                Download Headlines
+            </button>
+
+            <button id="shareBtn">
+                Share Tool
+            </button>
+
+        </section>
+
+        <section class="history-card">
+
+            <h2>Recent Headlines</h2>
+
+            <div id="historyList">
+                No recent headlines.
+            </div>
+
+        </section>
+
+        <section class="examples">
+
+            <h2>
+            LinkedIn Headline Examples
+            </h2>
+
+            <h3>
+            Software Engineer
+            </h3>
+
+            <p>
+            Software Engineer |
+            React Developer |
+            Building Scalable Web Applications
+            </p>
+
+            <h3>
+            Digital Marketer
+            </h3>
+
+            <p>
+            Digital Marketer |
+            SEO Specialist |
+            Driving Organic Growth
+            </p>
+
+            <h3>
+            Student
+            </h3>
+
+            <p>
+            Computer Science Student |
+            Passionate About AI and Web Development
+            </p>
+
+            <h3>
+            Freelancer
+            </h3>
+
+            <p>
+            Freelance SEO Specialist |
+            Helping Businesses Grow Online
+            </p>
+
+        </section>
+
+        <section class="seo-content">
+
+            <h2>What Makes a Good LinkedIn Headline?</h2>
+
+            <p>
+            A great LinkedIn headline clearly communicates who you are,
+            your expertise and the value you provide.
+            </p>
+
+            <p>
+            Include relevant keywords, specializations and a concise
+            value proposition to improve discoverability.
+            </p>
+
+        </section>
+
+        <section class="faq">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>How long can a LinkedIn headline be?</h3>
+
+            <p>LinkedIn allows up to 220 characters.</p>
+
+            <h3>Should I include keywords?</h3>
+
+            <p>
+                Yes. Keywords improve profile discoverability in search.
+            </p>
+
+        </section>
 
     </div>
 
-    <div class="field">
+    <script src="headline-generator.js"></script>
 
-      <label>Skills</label>
-
-      <input
-        type="text"
-        id="skills"
-        placeholder="React, SEO, Figma..."
-      >
-
-    </div>
-
-    <div class="field">
-
-      <label for="goal">Goal</label>
-
-      <select id="goal">
-
-        <option>Get Hired</option>
-        <option>Find Clients</option>
-        <option>Build Personal Brand</option>
-        <option>Networking</option>
-
-      </select>
-
-    </div>
-
-    <button id="generateBtn">
-      Generate Headlines
-    </button>
-
-  </section>
-
-  <section class="results-card">
-
-    <h2>Generated Headlines</h2>
-
-    <div id="results">
-
-      Your headlines will appear here.
-
-    </div>
-
-    <button id="copyBtn">
-      Copy All Headlines
-    </button>
-
-  </section>
-
-  <section class="seo-content">
-
-    <h2>What Makes a Good LinkedIn Headline?</h2>
-
-    <p>
-      A great LinkedIn headline clearly communicates who you are,
-      your expertise and the value you provide.
-    </p>
-
-    <p>
-      Include relevant keywords, specializations and a concise
-      value proposition to improve discoverability.
-    </p>
-
-  </section>
-
-  <section class="faq">
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>How long can a LinkedIn headline be?</h3>
-
-    <p>LinkedIn allows up to 220 characters.</p>
-
-    <h3>Should I include keywords?</h3>
-
-    <p>
-      Yes. Keywords improve profile discoverability in search.
-    </p>
-
-  </section>
-
-</div>
-
-<script src="headline-generator.js"></script>
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+    {
+    "@type":"Question",
+    "name":"How long can a LinkedIn headline be?",
+    "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"LinkedIn headlines can contain up to 220 characters."
+    }
+    },
+    {
+    "@type":"Question",
+    "name":"Should I include keywords?",
+    "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"Yes. Keywords improve profile discoverability and help recruiters find you."
+    }
+    }
+    ]
+    }
+    </script>
 
 </body>
 </html>
