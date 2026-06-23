@@ -13,6 +13,36 @@
 
     <link rel="stylesheet" href="headline-generator.css">
     <link rel="icon" href="favicon.svg">
+
+    <meta
+        name="robots"
+        content="index,follow"
+    >
+
+    <meta
+        property="og:title"
+        content="LinkedIn Headline Generator | ProfileCraft"
+    >
+
+    <meta
+        property="og:description"
+        content="Generate professional LinkedIn headlines instantly."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://profilecut.avikyou4.workers.dev/headline-generator.html"
+    >
+
+    <link
+        rel="canonical"
+        href="https://profilecut.avikyou4.workers.dev/headline-generator.html"
+    >
     
 </head>
 
@@ -32,7 +62,10 @@
                 Generate professional LinkedIn headlines in seconds.
             </p>
 
-            <button id="themeToggle">
+            <button
+                type="button"
+                id="themeToggle"
+            >     
                 🌙 Dark Mode
             </button>
 
@@ -48,7 +81,11 @@
 
                 <label for="profession">Profession</label>
 
-                <select id="profession">
+                <select
+                    id="profession"
+                    name="profession"
+                    aria-label="Profession"
+                >
 
                     <option>Software Engineer</option>
                     <option>Digital Marketer</option>
@@ -67,7 +104,9 @@
 
             <div class="field">
 
-            <label>Skills</label>
+            <label for="skills">
+                Skills
+            </label>
 
             <input
                 type="text"
@@ -80,7 +119,11 @@
 
                 <label for="goal">Goal</label>
 
-                <select id="goal">
+                <select
+                    id="goal"
+                    name="goal"
+                    aria-label="Goal"
+                >
 
                     <option>Get Hired</option>
                     <option>Find Clients</option>
@@ -94,7 +137,11 @@
             <div class="checkbox-group">
 
                 <label>
-                    <input type="checkbox" id="openToWork">
+                    <input
+                        type="checkbox"
+                        id="openToWork"
+                        name="openToWork"
+                    >
                     Open to Work
                 </label>
 
@@ -103,17 +150,27 @@
             <div class="checkbox-group">
 
                 <label>
-                    <input type="checkbox" id="emojiMode">
+                    <input
+                        type="checkbox"
+                        id="emojiMode"
+                        name="emojiMode"
+                    >
                     Add Emojis
                 </label>
 
             </div>
 
-            <button id="generateBtn">
+            <button
+                type="button"
+                id="generateBtn"
+            >
                 Generate Headlines
             </button>
 
-            <button id="moreBtn">
+            <button
+                type="button"
+                id="moreBtn"
+            >    
                 Generate More
             </button>
 
@@ -143,19 +200,29 @@
 
             <div id="results">
 
-                Your headlines will appear here.
+                Enter your details and click
+                "Generate Headlines".
 
             </div>
 
-            <button id="copyBtn">
+            <button
+                type="button"
+                id="copyBtn"
+            >     
                 Copy All Headlines
             </button>
 
-            <button id="downloadBtn">
+            <button
+                type="button"
+                id="downloadBtn"
+            >     
                 Download Headlines
             </button>
 
-            <button id="shareBtn">
+            <button
+                type="button"
+                id="shareBtn"
+            >     
                 Share Tool
             </button>
 
@@ -277,6 +344,31 @@
     ]
     }
     </script>
+
+    <footer>
+
+        <p>
+            © 2026 ProfileCraft.
+            All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                 Home
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms of Service
+            </a>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>
