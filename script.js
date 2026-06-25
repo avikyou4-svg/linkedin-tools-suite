@@ -16,96 +16,163 @@ const themeToggle = document.getElementById("themeToggle");
 
 function updatePreview() {
 
+  if (!inputText || !previewContent) return;
+
   previewContent.textContent = inputText.value;
 
-  const characterCountValue = inputText.value.length;
+  const chars = inputText.value.length;
 
-  const wordCountValue = inputText.value
+  const words = inputText.value
     .trim()
     .split(/\s+/)
     .filter(word => word.length > 0)
     .length;
 
-  characterCount.textContent =
-    `${characterCountValue} / 2600 characters | ${wordCountValue} words`;
+  if (characterCount) {
 
-  if (characterCountValue <= 2400) {
-    characterCount.style.color = "green";
-  } else if (characterCountValue <= 2600) {
-    characterCount.style.color = "orange";
-  } else {
-    characterCount.style.color = "red";
+    characterCount.textContent =
+      `${chars} / 2600 characters | ${words} words`;
+
+    if (chars <= 2400) {
+      characterCount.style.color = "green";
+    } else if (chars <= 2600) {
+      characterCount.style.color = "orange";
+    } else {
+      characterCount.style.color = "red";
+    }
+
   }
 
-  const percentage = Math.min(
-    (characterCountValue / 2600) * 100,
-    100
-  );
+  if (progressFill) {
 
-  progressFill.style.width = percentage + "%";
+    const percentage =
+      Math.min((chars / 2600) * 100, 100);
+
+    progressFill.style.width =
+      percentage + "%";
+
+  }
+
 }
 
-inputText.addEventListener("input", updatePreview);
+if (inputText) {
+  inputText.addEventListener(
+    "input",
+    updatePreview
+  );
+}
 
-cleanBtn.addEventListener("click", () => {
+if (cleanBtn) {
 
-  let text = inputText.value;
+  cleanBtn.addEventListener(
+    "click",
+    () => {
 
-  text = text.replace(/[ \t]+/g, " ");
-  text = text.replace(/\n{3,}/g, "\n\n");
+      let text = inputText.value;
 
-  inputText.value = text;
+      text =
+        text.replace(/[ \t]+/g, " ");
 
-  updatePreview();
-});
+      text =
+        text.replace(/\n{3,}/g, "\n\n");
 
-bulletBtn.addEventListener("click", () => {
+      inputText.value = text;
 
-  const lines = inputText.value
-    .split("\n")
-    .filter(line => line.trim() !== "");
+      updatePreview();
 
-  const bulletText = lines
-    .map(line => "• " + line.trim())
-    .join("\n");
+    }
+  );
 
-  inputText.value = bulletText;
+}
 
-  updatePreview();
-});
+if (bulletBtn) {
 
-clearBtn.addEventListener("click", () => {
+  bulletBtn.addEventListener(
+    "click",
+    () => {
 
-  inputText.value = "";
+      const lines =
+        inputText.value
+          .split("\n")
+          .filter(
+            line =>
+              line.trim() !== ""
+          );
 
-  updatePreview();
-});
+      inputText.value =
+        lines
+          .map(
+            line =>
+              "• " +
+              line.trim()
+          )
+          .join("\n");
 
-copyBtn.addEventListener("click", async () => {
+      updatePreview();
 
-  try {
+    }
+  );
 
-    await navigator.clipboard.writeText(
-      inputText.value
-    );
+}
 
-    copyBtn.textContent = "Copied!";
+if (clearBtn) {
 
-    setTimeout(() => {
-      copyBtn.textContent = "Copy Formatted Text";
-    }, 2000);
+  clearBtn.addEventListener(
+    "click",
+    () => {
 
-  } catch {
+      inputText.value = "";
 
-    alert("Copy failed.");
+      updatePreview();
 
-  }
+    }
+  );
 
-});
+}
 
-professionalTemplate.addEventListener("click", () => {
+if (copyBtn) {
 
-  inputText.value =
+  copyBtn.addEventListener(
+    "click",
+    async () => {
+
+      try {
+
+        await navigator.clipboard
+          .writeText(
+            inputText.value
+          );
+
+        copyBtn.textContent =
+          "Copied!";
+
+        setTimeout(() => {
+
+          copyBtn.textContent =
+            "Copy Formatted Text";
+
+        }, 2000);
+
+      } catch {
+
+        alert(
+          "Unable to copy text."
+        );
+
+      }
+
+    }
+  );
+
+}
+
+if (professionalTemplate) {
+
+  professionalTemplate.addEventListener(
+    "click",
+    () => {
+
+      inputText.value =
 `Hi, I'm [Your Name].
 
 I help [Audience] achieve [Result].
@@ -118,12 +185,20 @@ My expertise includes:
 
 Let's connect.`;
 
-  updatePreview();
-});
+      updatePreview();
 
-freelancerTemplate.addEventListener("click", () => {
+    }
+  );
 
-  inputText.value =
+}
+
+if (freelancerTemplate) {
+
+  freelancerTemplate.addEventListener(
+    "click",
+    () => {
+
+      inputText.value =
 `Freelancer helping businesses with:
 
 • SEO
@@ -132,12 +207,20 @@ freelancerTemplate.addEventListener("click", () => {
 
 Available for projects and collaborations.`;
 
-  updatePreview();
-});
+      updatePreview();
 
-jobSeekerTemplate.addEventListener("click", () => {
+    }
+  );
 
-  inputText.value =
+}
+
+if (jobSeekerTemplate) {
+
+  jobSeekerTemplate.addEventListener(
+    "click",
+    () => {
+
+      inputText.value =
 `Passionate professional with experience in:
 
 • Skill 1
@@ -146,26 +229,66 @@ jobSeekerTemplate.addEventListener("click", () => {
 
 Always learning and looking for new opportunities.`;
 
-  updatePreview();
-});
+      updatePreview();
 
-themeToggle.addEventListener("click", () => {
-
-  document.body.classList.toggle("dark-mode");
-
-  localStorage.setItem(
-    "theme",
-    document.body.classList.contains("dark-mode")
-      ? "dark"
-      : "light"
+    }
   );
 
-});
-
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-mode");
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  updatePreview();
-});
+function updateThemeButton() {
+
+  if (!themeToggle) return;
+
+  themeToggle.textContent =
+    document.body.classList.contains(
+      "dark-mode"
+    )
+      ? "☀️ Light Mode"
+      : "🌙 Dark Mode";
+
+}
+
+if (themeToggle) {
+
+  themeToggle.addEventListener(
+    "click",
+    () => {
+
+      document.body.classList.toggle(
+        "dark-mode"
+      );
+
+      localStorage.setItem(
+        "theme",
+        document.body.classList.contains(
+          "dark-mode"
+        )
+          ? "dark"
+          : "light"
+      );
+
+      updateThemeButton();
+
+    }
+  );
+
+}
+
+if (
+  localStorage.getItem("theme")
+  === "dark"
+) {
+
+  document.body.classList.add(
+    "dark-mode"
+  );
+
+}
+
+updateThemeButton();
+
+window.addEventListener(
+  "DOMContentLoaded",
+  updatePreview
+);

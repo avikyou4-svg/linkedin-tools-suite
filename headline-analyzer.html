@@ -1,0 +1,225 @@
+<header>
+
+    <a href="index.html" class="logo">
+        ProfileCraft
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            About Formatter
+        </a>
+
+        <a href="headline-generator.html">
+            Headline Generator
+        </a>
+
+        <a href="headline-analyzer.html">
+            Headline Analyzer
+        </a>
+
+    </nav>
+
+        <section class="related-links">
+
+        <h2>Improve Your Headline</h2>
+
+        <ul>
+
+            <li>
+                <a href="headline-generator.html">
+                    Generate Better Headlines
+                </a>
+            </li>
+
+            <li>
+                <a href="linkedin-headline-examples.html">
+                    View Headline Examples
+                </a>
+            </li>
+
+        </ul>
+
+</section>
+
+</header>
+
+
+<div class="tool-navigation">
+
+    <a href="headline-generator.html">
+        Generate Better Headlines →
+    </a>
+
+    <a href="index.html">
+        Format LinkedIn About Section →
+    </a>
+
+</div>
+
+<section class="hero">
+
+    <h1>LinkedIn Headline Analyzer</h1>
+
+    <p>
+        Analyze your LinkedIn headline, get a score,
+        and improve it with actionable suggestions.
+    </p>
+
+</section>
+
+<section class="analyzer-container">
+
+    <div class="input-card">
+
+        <h2>Paste Your Headline</h2>
+
+        <textarea
+            id="headlineInput"
+            placeholder="Example:
+                Software Engineer | React Developer | Building Scalable Web Applications"
+        ></textarea>
+
+        <button
+            type="button"
+            id="analyzeBtn"
+        >
+            Analyze Headline
+        </button>
+
+    </div>
+
+    <div class="results-card">
+
+        <div class="score-box">
+
+            <h3>Headline Score</h3>
+
+            <p id="headlineScore" class="score-value">
+                0 / 100
+            </p>
+
+        </div>
+
+        <div class="score-box">
+
+            <h3>Character Count</h3>
+
+            <p id="characterCount" class="score-value">
+                0 / 220
+            </p>
+
+        </div>
+
+        <div class="analysis-box">
+
+            <h3>Strengths</h3>
+
+            <ul id="strengths">
+                <li>
+                Analyze a headline to see results.
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="analysis-box">
+
+            <h3>Improvements</h3>
+
+            <ul id="improvements">
+                <li>
+                Suggestions will appear here.
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="analysis-box">
+
+            <h3>Suggested Headline</h3>
+
+            <p id="suggestedHeadline">
+                —
+            </p>
+
+            <button
+                type="button"
+                id="copySuggestionBtn"
+            >
+                Copy Suggestion
+            </button>
+
+            <button
+                type="button"
+                id="saveAnalysisBtn"
+            >
+                Save Analysis
+            </button>
+
+        </div>
+
+        <div class="score-box">
+
+            <h3>SEO Strength</h3>
+
+            <p id="seoStrength">
+                0 / 10
+            </p>
+
+        </div>
+
+        <div class="score-box">
+
+            <h3>Recruiter Readability</h3>
+
+            <p id="readabilityScore">
+                0 / 10
+            </p>
+
+        </div>
+
+        <div class="score-box">
+
+            <h3>Keyword Strength</h3>
+
+            <p id="keywordStrength">
+                0 / 10
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="history-card">
+
+    <h2>
+        Recent Analyses
+    </h2>
+
+    <div id="analysisHistory">
+
+        No analyses yet.
+
+    </div>
+
+</section>
+
+<button
+    type="button"
+    id="shareAnalysisBtn"
+>
+    Share Analysis
+</button>
+
+<script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    ...
+    }
+</script>
+

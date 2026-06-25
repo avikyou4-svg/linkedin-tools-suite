@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -198,13 +198,15 @@ button:hover {
 }
 
 .tool-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition:
-  transform 0.25s ease;
-  cursor: pointer;
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease;
+    cursor: pointer;
 }
 
 .tool-card:hover {
@@ -309,9 +311,7 @@ footer {
   margin-bottom: 15px;
 }
 
-.dark-mode body {
-  background: #121212;
-}
+
 
 .dark-mode .container {
   color: white;
@@ -331,4 +331,114 @@ footer {
 
 .dark-mode .copyright {
   color: #bbb;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0A66C2;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  color: #0A66C2;
+}
+
+.tool-navigation {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.tool-navigation a {
+  text-decoration: none;
+  color: #0A66C2;
+  font-weight: 600;
+}
+
+.related-links {
+  margin-top: 50px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.related-links h2 {
+  margin-bottom: 15px;
+}
+
+.related-links ul {
+  padding-left: 20px;
+}
+
+.related-links li {
+  margin-bottom: 10px;
+}
+
+.related-links a {
+  color: #0A66C2;
+  text-decoration: none;
+}
+
+.dark-mode .related-links,
+.dark-mode .tool-hub {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .site-header {
+  border-color: #333;
+}
+
+.dark-mode .site-header nav a {
+  color: white;
+}
+
+.dark-mode .tool-navigation a,
+.dark-mode .related-links a {
+  color: #66aaff;
+}
+
+@media (max-width: 768px) {
+
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .site-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+.tool-hub {
+  margin-top: 60px;
+}
+
+.tool-hub h2 {
+  text-align: center;
+  margin-bottom: 25px;
 }

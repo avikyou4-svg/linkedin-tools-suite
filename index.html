@@ -1,275 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ProfileCraft | Professional Profile Optimization Tools</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>
+ProfileCraft | Free LinkedIn About Section Formatter
+</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">  
+<meta
+name="description"
+content="Format your LinkedIn About section with clean spacing, bullet points, templates and live preview. Free LinkedIn profile optimization tool."
+>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta
+name="keywords"
+content="linkedin about formatter, linkedin summary formatter, linkedin profile optimization, linkedin about section tool"
+>
 
-  <meta
-    name="description"
-    content="ProfileCraft provides free tools to improve professional profiles, format LinkedIn About sections, generate headlines and optimize personal branding."
-  >
+<meta name="robots" content="index,follow">
 
-  <meta
-    name="keywords"
-    content="linkedin about section formatter, linkedin summary formatter, linkedin profile summary, linkedin formatting tool"
-  >
+<link
+rel="canonical"
+href="https://linkedin-tools-suite.avikyou4.workers.dev/"
+>
 
-  <meta name="robots" content="index,follow">
-  <meta property="og:title" content="LinkedIn About Section Formatter">
+<link
+rel="icon"
+href="favicon.svg"
+>
 
-  <a href="headline-generator.html">
-    LinkedIn Headline Generator
-  </a>
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style.css">
+
+<meta property="og:type" content="website">
+
+<meta
+property="og:title"
+content="ProfileCraft | LinkedIn About Formatter"
+>
+
+<meta
+property="og:description"
+content="Format and optimize your LinkedIn About section with live preview."
+>
+
+<meta
+property="og:image"
+content="https://linkedin-tools-suite.avikyou4.workers.dev/og-image.png"
+>
+
+<meta
+property="og:url"
+content="https://linkedin-tools-suite.avikyou4.workers.dev/"
+>
 
 </head>
+
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <header>
-      <h1>ProfileCraft</h1>
+<header class="site-header">
 
-      <p>
-        Format your LinkedIn About section with clean spacing,
-        bullet points and live preview.
-      </p>
-    </header>
-    
-    <section class="hero">
+<a href="index.html" class="logo">
+ProfileCraft
+</a>
 
-      <h2>Professional Profile Optimization Tools</h2>
+<nav>
 
-      <p class="tagline">
-        Build Better Profiles. Create Better Opportunities.
-      </p>
+<a href="index.html">
+About Formatter
+</a>
 
-      <p>
-        Create stronger professional profiles with free formatting,
-        writing and optimization tools designed for job seekers,
-        freelancers and creators.
-      </p>
+<a href="headline-generator.html">
+Headline Generator
+</a>
 
-      <div class="hero-buttons">
+<a href="headline-analyzer.html">
+Headline Analyzer
+</a>
 
-      <a href="#aboutFormatter">
-        Try About Formatter
-      </a>
+</nav>
 
-      </div>
+</header>
 
-      <button id="themeToggle">
-      🌙 Dark Mode
-      </button>
+<section class="hero">
 
-      <div class="hero-buttons">
-        <a href="#aboutFormatter">About Formatter</a>
+<h1>
+Professional LinkedIn Profile Optimization Tools
+</h1>
 
-        <a href="headline-generator.html">
-          Headline Generator
-        </a>
-      </div>
+<p class="tagline">
+Build Better Profiles. Create Better Opportunities.
+</p>
 
-    </section>
+<p>
+Create stronger professional profiles with free formatting,
+writing and optimization tools designed for job seekers,
+freelancers and creators.
+</p>
 
-    <section class="tool-section" id="aboutFormatter">
+<div class="hero-buttons">
 
-      <div class="input-box">
-        <h2>Your About Section</h2>
+<a href="#aboutFormatter">
+Try About Formatter
+</a>
 
-        <textarea
-          id="inputText"
-          placeholder="Paste your LinkedIn About section here..."
-        ></textarea>
+</div>
 
-        <div class="buttons">
+<button id="themeToggle">
+🌙 Dark Mode
+</button>
 
-          <button id="cleanBtn">
-            Clean Spacing
-          </button>
+</section>
 
-          <button id="bulletBtn">
-            Add Bullets
-          </button>
+<section class="tool-hub">
 
-          <button id="clearBtn">
-            Clear
-          </button>
-          <button id="professionalTemplate">
-            Professional Template
-          </button>
-          
-          <button id="freelancerTemplate">
-            Freelancer Template
-          </button>
+<h2>
+ProfileCraft Tools
+</h2>
 
-          <button id="jobSeekerTemplate">
-            Job Seeker Template
-          </button>
+<div class="tool-grid">
 
-        </div>
+<a
+href="index.html"
+class="tool-card"
+>
+LinkedIn About Formatter
+</a>
 
-        <div id="characterCount">
-        </div>  
-          
-        <div class="progress-bar">
+<a
+href="headline-generator.html"
+class="tool-card"
+>
+LinkedIn Headline Generator
+</a>
 
-            <div id="progressFill"></div>
+<a
+href="headline-analyzer.html"
+class="tool-card"
+>
+LinkedIn Headline Analyzer
+</a>
 
-        </div>
-      
-      </div>
+</div>
 
-      <div class="preview-box">
+</section>
 
-  <h2>LinkedIn Preview</h2>
+<section
+class="tool-section"
+id="aboutFormatter"
+>
 
-  <div class="linkedin-card">
+<div class="input-box">
 
-    <div class="linkedin-header">
+<h2>
+Your About Section
+</h2>
 
-      <div class="avatar">
+<textarea
+id="inputText"
+placeholder="Paste your LinkedIn About section here..."
+></textarea>
+
+<div class="buttons">
+
+<button id="cleanBtn">
+Clean Spacing
+</button>
+
+<button id="bulletBtn">
+Add Bullets
+</button>
+
+<button id="clearBtn">
+Clear
+</button>
+
+<button id="professionalTemplate">
+Professional Template
+</button>
+
+<button id="freelancerTemplate">
+Freelancer Template
+</button>
+
+<button id="jobSeekerTemplate">
+Job Seeker Template
+</button>
+
+</div>
+
+<div id="characterCount"></div>
+
+<div class="progress-bar">
+<div id="progressFill"></div>
+</div>
+
+</div>
+
+<div class="preview-box">
+
+<h2>
+LinkedIn Preview
+</h2>
+
+<div class="linkedin-card">
+
+<div class="linkedin-header">
+
+<div class="avatar">
 A
-      </div>
+</div>
 
-      <div>
-        <strong>ProfileCraft User</strong>
-        <p>Professional Profile Preview</p>
-      </div>
+<div>
 
-    </div>
+<strong>
+ProfileCraft User
+</strong>
 
-    <hr>
+<p>
+Professional Profile Preview
+</p>
 
-    <h3>About</h3>
+</div>
 
-    <div id="previewContent">
-      Your formatted content will appear here.
-    </div>
+</div>
 
-  </div>
+<hr>
 
-  <button id="copyBtn">
-    Copy Formatted Text
-  </button>
+<h3>
+About
+</h3>
 
-  </div>
+<div id="previewContent">
+Your formatted content will appear here.
+</div>
 
-    </section>
+</div>
 
-    <section class="future-tools">
+<button id="copyBtn">
+Copy Formatted Text
+</button>
 
-      <h2>More Tools Coming to ProfileCraft</h2>
+</div>
 
-      <div class="tool-grid">
+</section>
 
-        <div class="tool-card">
-          LinkedIn Headline Generator
-        </div>
+<section class="future-tools">
 
-        <div class="tool-card">
-          LinkedIn Post Formatter
-        </div>
+<h2>
+More LinkedIn Tools
+</h2>
 
-        <div class="tool-card">
-          LinkedIn Hashtag Generator
-        </div>
+<div class="tool-grid">
 
-        <div class="tool-card">
-          LinkedIn Character Counter
-        </div>
+<a
+href="headline-generator.html"
+class="tool-card"
+>
+LinkedIn Headline Generator
+</a>
 
-        <div class="tool-card">
-          Professional Bio Generator
-        </div>
+<a
+href="headline-analyzer.html"
+class="tool-card"
+>
+LinkedIn Headline Analyzer
+</a>
 
-        </div>
+<div class="tool-card">
+LinkedIn Post Formatter
+</div>
 
-    </section>
+<div class="tool-card">
+LinkedIn Hashtag Generator
+</div>
 
-  </div>
-    <section class="seo-content">
+<div class="tool-card">
+Professional Bio Generator
+</div>
 
-      <h2>How to Format a LinkedIn About Section</h2>
+</div>
 
-      <p>
-        A well-formatted LinkedIn About section improves readability,
-        helps recruiters understand your expertise, and increases profile engagement.
-      </p>
+</section>
 
-      <h2>Why Formatting Matters</h2>
+<section class="seo-content">
 
-      <p>
-        Clean spacing, bullet points and concise paragraphs make your profile easier to read.
-      </p>
+<h2>
+How to Format a LinkedIn About Section
+</h2>
 
-    </section>
+<p>
+A well-formatted LinkedIn About section improves readability,
+helps recruiters understand your expertise and increases profile engagement.
+Clean formatting makes your profile easier to scan and more professional.
+</p>
 
-    <section class="faq-section">
+<h2>
+Why Formatting Matters
+</h2>
 
-      <h2>Frequently Asked Questions</h2>
+<p>
+Most recruiters spend only a few seconds reviewing a profile.
+Using spacing, bullet points and concise paragraphs can improve readability
+and help communicate your value more effectively.
+</p>
 
-      <h3>How many characters can a LinkedIn About section have?</h3>
+</section>
 
-      <p>
-        LinkedIn allows up to 2600 characters.
-      </p>
+<section class="faq-section">
 
-      <h3>Can I use bullet points?</h3>
+<h2>
+Frequently Asked Questions
+</h2>
 
-      <p>
-        Yes. Bullet points improve readability.
-      </p>
+<h3>
+How many characters can a LinkedIn About section have?
+</h3>
 
-      <h3>Why does LinkedIn formatting break?</h3>
+<p>
+LinkedIn allows up to 2600 characters in the About section.
+</p>
 
-      <p>
-        Extra spaces and unsupported formatting can be removed when pasted.
-      </p>
+<h3>
+Can I use bullet points in LinkedIn?
+</h3>
 
-    </section>
+<p>
+Yes. Bullet points improve readability and help highlight key information.
+</p>
 
-    <section class="disclaimer">
+<h3>
+Why does LinkedIn formatting sometimes break?
+</h3>
 
-      <p>
-        ProfileCraft is an independent platform and is not affiliated
-        with or endorsed by LinkedIn or any other social media platform.
-      </p>
+<p>
+Extra spaces and unsupported formatting may be removed when content is pasted.
+Using a formatter helps reduce these issues.
+</p>
 
-    </section>
+</section>
 
-    <footer>
+<section class="related-links">
 
-      <div class="footer-brand">
-        <h3>ProfileCraft</h3>
+<h2>
+Helpful Resources
+</h2>
 
-        <p>
-          Professional profile optimization tools for job seekers,
-          freelancers and creators.
-        </p>
-      </div>
+<ul>
 
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-      </div>
+<li>
+<a href="headline-generator.html">
+LinkedIn Headline Generator
+</a>
+</li>
 
-      <p class="copyright">
-        © 2026 ProfileCraft. All rights reserved.
-      </p>
+<li>
+<a href="headline-analyzer.html">
+LinkedIn Headline Analyzer
+</a>
+</li>
 
-    </footer>
-  
-    <script src="script.js"></script>
+<li>
+<a href="linkedin-headline-examples.html">
+LinkedIn Headline Examples
+</a>
+</li>
+
+<li>
+<a href="linkedin-about-section-examples.html">
+LinkedIn About Section Examples
+</a>
+</li>
+
+</ul>
+
+</section>
+
+<section class="disclaimer">
+
+<p>
+ProfileCraft is an independent platform and is not affiliated
+with or endorsed by LinkedIn.
+</p>
+
+</section>
+
+<footer>
+
+<div class="footer-brand">
+
+<h3>
+ProfileCraft
+</h3>
+
+<p>
+Professional profile optimization tools for job seekers,
+freelancers and creators.
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+<a href="terms.html">
+Terms of Service
+</a>
+
+</div>
+
+<p class="copyright">
+© 2026 ProfileCraft. All rights reserved.
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"ProfileCraft",
+  "url":"https://linkedin-tools-suite.avikyou4.workers.dev/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How many characters can a LinkedIn About section have?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"LinkedIn allows up to 2600 characters in the About section."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I use bullet points in LinkedIn?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Bullet points improve readability and organization."
+      }
+    }
+  ]
+}
+</script>
 
 </body>
 </html>
